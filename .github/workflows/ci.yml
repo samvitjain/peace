@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Test, Build, Release Demo app to Azure Storgae
+name: Explore GITHUB actions and CI/CD
 # name: Test, Build and Release apk
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
