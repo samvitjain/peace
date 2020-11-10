@@ -29,7 +29,7 @@ jobs:
     # - name: 'Upload Apk'
     #   uses: wei/curl@v1
     #   with:
-    #     args: -X POST 'https://--your-url---.com/api/UploadApk?filename=release.apk' -F file=@build\app\outputs\flutter-apk\app-release.apk
+    #     args: -X POST 'https://--your-url---.com/api/UploadApk?filename=release.apk' -F file=@build\app\outputs\flutter-apk\app-release.apk check again
   buildWEB:
     name: Build Web
     env:
@@ -54,4 +54,3 @@ jobs:
           git add --all
           git commit -m "update"
           git push origin gh-pages -f
-        
