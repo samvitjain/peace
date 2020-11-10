@@ -11,7 +11,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains 2 JOBS. WEB AND APK
-  build:
+  buildAPK:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
@@ -30,7 +30,7 @@ jobs:
       uses: wei/curl@v1
       with:
         args: -X POST 'https://--your-url---.com/api/UploadApk?filename=release.apk' -F file=@build\app\outputs\flutter-apk\app-release.apk
-  build:
+  buildWEB:
     name: Build Web
     env:
       my_secret: ${{secrets.commit_secret}}
