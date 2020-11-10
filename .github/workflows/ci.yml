@@ -10,7 +10,7 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
+  # This workflow contains 2 JOBS. WEB AND APK
   build:
     runs-on: ubuntu-latest
     steps:
@@ -30,4 +30,28 @@ jobs:
       uses: wei/curl@v1
       with:
         args: -X POST 'https://--your-url---.com/api/UploadApk?filename=release.apk' -F file=@build\app\outputs\flutter-apk\app-release.apk
+  build:
+    name: Build Web
+    env:
+      my_secret: ${{secrets.commit_secret}}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: subosito/flutter-action@v1
+        with:
+          channel: 'dev'
+      - run: flutter config --enable-web
+      - run: flutter pub get
+      - run: flutter build web --release
+      - run: |
+          cd build/web
+          git init
+          git config --global user.email jain.samvit@gmail.com
+          git config --global user.name samvitjain
+          git status
+          git remote add origin https://${{secrets.COMMIT_TOKEN}}@github.com/samvitjain/peace.git
+          git checkout -b gh-pages
+          git add --all
+          git commit -m "update"
+          git push origin gh-pages -f
         
