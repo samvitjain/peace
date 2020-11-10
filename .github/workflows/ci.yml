@@ -49,7 +49,7 @@ jobs:
           git config --global user.email jain.samvit@gmail.com
           git config --global user.name samvitjain
           git status
-          git remote add origin https://${{secrets.COMMIT_TOKEN}}@github.com/samvitjain/peace.git
+          git remote add origin https://${{secrets.COMMIT_TOKEN}}@github.com/samvitjain/samvitjain.github.io.git
           git checkout -b gh-pages
           git add --all
           git commit -m "update"
