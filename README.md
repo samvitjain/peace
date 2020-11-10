@@ -1,16 +1,11 @@
 # peace_app
 
-A new Flutter project.
+A simple project to explore CI/CD with github actions and github pages.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+See ci.yml file for github actions.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+- [Follow this blog post for learning about CI/CD with github actions and pages using flutter web](https://medium.com/flutter-community/flutter-web-github-actions-github-pages-dec8f308542a)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.

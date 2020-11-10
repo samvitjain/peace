@@ -26,10 +26,10 @@ jobs:
     #   run: flutter test
     - name: 'Build Prod Apk'
       run: flutter clean && flutter build apk
-    - name: 'Upload Apk'
-      uses: wei/curl@v1
-      with:
-        args: -X POST 'https://--your-url---.com/api/UploadApk?filename=release.apk' -F file=@build\app\outputs\flutter-apk\app-release.apk
+    # - name: 'Upload Apk'
+    #   uses: wei/curl@v1
+    #   with:
+    #     args: -X POST 'https://--your-url---.com/api/UploadApk?filename=release.apk' -F file=@build\app\outputs\flutter-apk\app-release.apk
   buildWEB:
     name: Build Web
     env:
