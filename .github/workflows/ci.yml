@@ -22,7 +22,7 @@ jobs:
       # with:
       #   channel: 'dev'
     # - run: flutter pub get
-    # - name: 'Run Test(s)' d
+    # - name: 'Run Test(s)' dd
     #   run: flutter test
     - name: 'Build Prod Apk'
       run: flutter clean && flutter build apk
